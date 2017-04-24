@@ -3,6 +3,6 @@ applications:
   memory: 512M
   instances: 1
   domain: mybluemix.net
-  name: test587
-  host: test587
+  name: test587dev
+  host: test587dev
   disk_quota: 1024M
