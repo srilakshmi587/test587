@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <project basedir="." default="build" name="Java Cloudant Web Starter" xmlns:sonar="antlib:org.sonar.ant">
             <property environment="env" />
+		
+		<target name="install-jars" description="Install ANT optional jars">
+        <mkdir dir="${user.home}/.ant/lib"/>
+        <get dest="${user.home}/.ant/lib/mail.jar"       src="http://search.maven.org/remotecontent?filepath=javax/mail/mail/1.4.4/mail-1.4.4.jar"/>
+        <get dest="${user.home}/.ant/lib/activation.jar" src="http://search.maven.org/remotecontent?filepath=javax/activation/activation/1.1/activation-1.1.jar"/>
+    </target>
             
-		<target description="Generates and send junit test reports" name="emailtestmss">
+		<target description="Generates and send junit test reports" name="emailtestmss" depends="install-jars">
       <mail mailhost="smtp.miraclesoft.com" mailport="587" password="Ias@9641" enableStartTLS="true" subject="mail_send" user="kimandi@miraclesoft.com">
   <from address="kimandi@miraclesoft.com"></from>
 
