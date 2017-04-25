@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import wasdev.sample.functions.*;
 /**
+test
  * Servlet implementation class SimpleServlet
  */
 @WebServlet("/SimpleServlet")
